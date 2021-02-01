@@ -1,0 +1,12 @@
+type ListTasks {
+  id: ID!
+  title: String!
+}
+
+type Query {
+  findAllLists: [ListTasks]!
+}
+
+type Mutation {
+  newList(title: String!)
+}

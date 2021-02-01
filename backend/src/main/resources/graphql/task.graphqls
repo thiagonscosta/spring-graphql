@@ -1,0 +1,14 @@
+type Task {
+  id: ID!
+  title: String!
+  description: String!
+  list: ListTasks
+}
+
+type Query {
+  findAllByListId: [Task]! 
+}
+
+type Mutation {
+  newTask(title: String!, description: String!, listId: Long!) : Task!;
+}
